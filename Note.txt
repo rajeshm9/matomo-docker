@@ -1,0 +1,9 @@
+Notes
+
+curl -fsSL -o matomo.tar.gz "https://builds.matomo.org/matomo-3.13.4.tar.gz
+tar -xzf matomo.tar.gz -C /tmp/tt
+cd /tmp/tt2
+tar cf - --one-file-system -C /tmp/tt/matomo . | tar xf -
+
+
+tar cf - --one-file-system   -C /tmp/matomo . | tar xf --no-overwrite-dir -
